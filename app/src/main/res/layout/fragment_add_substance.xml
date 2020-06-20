@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Controller.ui.addSubstance.AddSubstanceFragment"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:maxLines="2"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:autoSizeMinTextSize="20sp"
+            android:autoSizeTextType="uniform"
+            android:text="Добавление нового вещества или продукта" />
+
+        <EditText
+            android:id="@+id/edit_text_name_substance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Введете название"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/edit_text_info"
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:minLines="4"
+            android:lines="8"
+            android:maxLines="10"
+            android:gravity="start"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:hint="Введите описание"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:verticalScrollbarPosition="right" />
+
+        <Button
+            android:id="@+id/btn_add_substance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:background="#4CAF50"
+            android:layout_marginTop="10dp"
+            android:text="добавить"/>
+
+    </LinearLayout>
+
+</LinearLayout>

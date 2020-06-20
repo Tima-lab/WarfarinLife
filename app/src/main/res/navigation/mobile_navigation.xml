@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.warfarinlife.Controller.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_settingProfileFragment"
+            app:destination="@id/settingProfileFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.warfarinlife.Controller.ui.list.ListFragment"
+        android:label="@string/menu_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_nav_gallery_to_addSubstanceFragment"
+            app:destination="@id/addSubstanceFragment"
+            app:enterAnim="@android:anim/fade_in">
+            <argument
+                android:name="id_prifile"
+                android:defaultValue="-1" />
+            <argument
+                android:name="id_profile"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.warfarinlife.Controller.LoginActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+
+    <activity
+        android:id="@+id/mainMenuActivity"
+        android:name="com.example.warfarinlife.Controller.MainMenuActivity"
+        android:label="app_bar_main_menu"
+        tools:layout="@layout/app_bar_main_menu" >
+
+    </activity>
+
+    <fragment
+        android:id="@+id/addSubstanceFragment"
+        android:name="com.example.warfarinlife.Controller.ui.addSubstance.AddSubstanceFragment"
+        android:label="@string/add_substance"
+        tools:layout="@layout/fragment_add_substance" >
+        <action
+            android:id="@+id/action_addSubstanceFragment_to_nav_gallery"
+            app:destination="@id/nav_gallery"
+            app:enterAnim="@android:anim/fade_out" />
+        <argument
+            android:name="id_profile"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingProfileFragment"
+        android:name="com.example.warfarinlife.Controller.ui.settingProfile.SettingProfileFragment"
+        android:label="@string/settings_profile"
+        tools:layout="@layout/fragment_profile_setting">
+        <action
+            android:id="@+id/action_settingProfileFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+</navigation>

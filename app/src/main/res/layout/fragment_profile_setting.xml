@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Controller.ui.settingProfile.SettingProfileFragment">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:text="Подтвердить"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_settings"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Настройки профиля"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"/>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:autoSizeMinTextSize="14sp"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="ИМЯ:"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/edit_text_profile_name"
+                android:inputType="text"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="МНО:"
+                android:autoSizeMinTextSize="14sp"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/edit_text_profile_mno"
+                android:inputType="numberDecimal"
+                android:maxLength="4"
+                android:gravity="center"
+                android:hint="#.##"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:autoSizeMinTextSize="14sp"
+                android:autoSizeTextType="uniform"
+                android:text="Дата сдачи:"
+                android:paddingBottom="4dp"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/edit_text_profile_date"
+                android:inputType="date"
+                android:maxLength="10"
+                android:gravity="center"
+                android:hint="Нажмите сюда"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Время:"
+                android:autoSizeMinTextSize="14sp"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/edit_text_profile_time"
+                android:inputType="time"
+                android:gravity="center"
+                android:maxLength="5"
+                android:hint="Нажмите сюда"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_profile_save"
+            android:layout_marginTop="15dp"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="сохранить"/>
+
+        <Button
+            android:id="@+id/btn_settings_recover_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autoSizeMinTextSize="10sp"
+            android:text="восстановить начальный список"
+            android:textColor="#FFFFFF"
+            android:background="#FF9800"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>
